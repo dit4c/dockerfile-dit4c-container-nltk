@@ -19,4 +19,4 @@ RUN pip3 install ipython jupyter nltk
 COPY etc /etc
 COPY var /var
 
-RUN su - researcher -c "mkdir -p ~/.jupyter && echo \"c.NotebookApp.base_url = '/jupyter'\" > ~/.jupyter/jupyter_notebook_config.py"
+RUN su - researcher -c "mkdir -p ~/.jupyter && echo -e \"c.NotebookApp.base_url = '/jupyter'\nc.NotebookApp.token = ''\" > ~/.jupyter/jupyter_notebook_config.py"
